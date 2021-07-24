@@ -15,83 +15,78 @@
   --textLight:#6C7686;
 
   --white: #ffffff;
+  --shadow: 0 0 1.25rem rgb(108 118 134 / 10%) ;
+;
 }
 
 html, body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
   background: #fafbfe;
+  overflow-x: hidden;
 }
 
-/* ________nav________ */
+/* ________hero_________ */
 
-nav {
+.hero {
+	margin: 5em auto;
+}
+
+.hero .heroWrap {
+	position: relative;
+	z-index: 100;
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+  gap:3em;
+}
+
+.hero .topItem {
+	position: absolute;
+	top: 0;
+	left: 0;
+  width: 90%;
+	max-width: 400px;
+	z-index: 0;
+}
+
+.hero .heroWrap article {
+	max-width: 480px;
+	padding: 8px 34px;
+}
+
+.hero .heroWrap article h1 {
+	font-size: 3.2rem;
+	font-weight: bold;
+	line-height: 3.2rem;
+}
+
+.hero .heroWrap article h1 .headerSecondaryText {
+	color: var(--primaryDark);
+}
+
+.hero .heroWrap article p {
+	font-size: 18px;
+	padding: 34px 0px;
+	font-weight: 200;
+}
+
+.hero .heroWrap article .learnMore {
 	background-color: var(--primaryDark);
 	color: var(--white);
-	height: auto;
-	padding: 10px;
-	/* width: 100%;
-	display: flex;
-	justify-content: end; */
-}
-
-nav .navWrap {
-	display: flex;
-	justify-content: space-between;
-	padding: 1px 3px;
-	align-items: center;
-}
-
-nav .navLinksWrap {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	padding: 1px 3px;
-}
-
-nav .navLinksWrap ul {
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-	padding: 2px 0px;
-}
-
-nav .navLinksWrap ul * {
-	list-style-type: none;
+	font-size: 16px;
+	padding: 12px 30px;
+	border-radius: 4px;
 	cursor: pointer;
-	font-size: 17px;
-	padding: 6px 8px;
-	border-radius: 7px;
-	transition: all 350ms ease-out;
-	display: flex;
-}
-
-nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
-	transition: all 350ms ease-out;
-	background-color: var(--primaryDark);
-}
-
-/* hamburger menu */
-
-.hamburger {
-	display: flex;
-	width: max-content;
-	height: auto;
-	justify-content: center;
-	align-items: center;
 	border: none;
-	background-color: transparent;
-	cursor: pointer;
-	padding: 7px;
-	border-radius: 7px;
-	transition: all 350ms ease-out;
+	outline: none;
 }
 
-.hamburger:hover, .hamburger:active {
-	transition: all 350ms ease-out;
-	background-color: var(--primary);
+.hero .heroWrap .art {
+	max-width: 700px;
+  width: 90%;
 }
 
 /* ________cards________ */
@@ -100,6 +95,7 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 	width: 100%;
 	padding: 0 15px;
 	text-align: center;
+  position: relative;
 }
 
 .heading{
@@ -124,10 +120,10 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 }
 
 .cards  img{
-	width:80px;
-	border-radius:100%;
+	width: 80px;
+	border-radius: 100%;
 	margin:0 auto;
-	margin-bottom:1em;
+	margin-bottom: 1.5em;
 }
 
 .card {
@@ -139,18 +135,17 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 	justify-content: center;
   border: .0625rem solid rgba(0, 0, 0, .08);
   border-radius: .375rem;
-	box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%) ;
+	box-shadow:var(--shadow);
 	gap:.5em;
-	padding:1.5em 1em;
+	padding:2em 1em;
 }
-
 
 
 /* mobile first design :lilygunemote: */
 
 @media only screen and (min-width: 480px) {
 	nav {
-		padding: 10px 5px;
+		padding: 10px 20px;
 		display: flex;
 		flex-direction: row;
 		width: 100%;
@@ -165,5 +160,14 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 		background-color: inherit;
 	}
 	.hamburger {display: none;}
+	/* .hero  */
+}
+
+@media only screen and (min-width: 620px) {
+	.hero .heroWrap {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+	}
 }
 
