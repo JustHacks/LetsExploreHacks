@@ -7,10 +7,14 @@
 }
 
 :root {
-	/* we can actually call the colours smth useful once we think of pallete */
-	--primary: #7B4CDB;
-	--primaryDark: rgb(109, 66, 193);
-	--secondary: #FFFFFF;
+	--primary: #B998FC;
+	--primaryDark: #7B4CDB;
+	/* --secondary: ; */
+
+  --text:#343A40;
+  --textLight:#6C7686;
+
+  --white: #ffffff;
 }
 
 html, body {
@@ -18,15 +22,16 @@ html, body {
 	font-weight: 400;
 	width: 100%;
 	height: 100vh;
+  background: #fafbfe;
 }
 
-/* nav */
+/* ________nav________ */
 
 nav {
-	background-color: var(--primary);
-	color: var(--secondary);
+	background-color: var(--primaryDark);
+	color: var(--white);
 	height: auto;
-	padding: 7px 2px;
+	padding: 10px;
 	/* width: 100%;
 	display: flex;
 	justify-content: end; */
@@ -37,7 +42,6 @@ nav .navWrap {
 	justify-content: space-between;
 	padding: 1px 3px;
 	align-items: center;
-  /* When we have logo we can set justify-content to space-evenly */
 }
 
 nav .navLinksWrap {
@@ -62,7 +66,6 @@ nav .navLinksWrap ul * {
 	border-radius: 7px;
 	transition: all 350ms ease-out;
 	display: flex;
-	background: var(--primary)
 }
 
 nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
@@ -88,44 +91,79 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 
 .hamburger:hover, .hamburger:active {
 	transition: all 350ms ease-out;
-	background-color: var(--primaryDark);
+	background-color: var(--primary);
 }
+
+/* ________cards________ */
+
+.features {
+	width: 100%;
+	padding: 0 15px;
+	text-align: center;
+}
+
+.heading{
+	margin: 4em auto;
+}
+
+.heading h2{
+	font-size: 2rem;
+	margin-bottom: .5em;
+}
+
+.heading h3 {font-size: 1.2rem;}
+
+.heading p {margin-bottom: 1rem;}
+
+.cards{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	gap: 2em;
+}
+
+.cards  img{
+	width:80px;
+	border-radius:100%;
+	margin:0 auto;
+	margin-bottom:1em;
+}
+
+.card {
+	width: 80%;
+	max-width: 300px;
+  display: flex;
+  flex-direction: column;
+	background:#fff;
+	justify-content: center;
+  border: .0625rem solid rgba(0, 0, 0, .08);
+  border-radius: .375rem;
+	box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%) ;
+	gap:.5em;
+	padding:1.5em 1em;
+}
+
+
 
 /* mobile first design :lilygunemote: */
 
 @media only screen and (min-width: 480px) {
 	nav {
-		padding: 4px 2px;
+		padding: 10px 5px;
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 	}
-	nav .navWrap {
-		width: max-content;
-	}
 	nav .navLinksWrap ul {
 		flex-direction: row;
-		justify-content: end;
-		padding: 6px 8px;
+		justify-content: flex-end;
 		display: flex !important;
 		gap: 8px;
-	}
-	nav .navLinksWrap ul * {
-		padding: 0px 0px;
-		border-radius: 0;
-		font-size: 13px;
-		width: max-content;
 	}
 	nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 		background-color: inherit;
 	}
-	.hamburger {
-		display: none;
-	}
+	.hamburger {display: none;}
 }
 
-@media only screen and (min-width: 620px) {
-	nav .navLinksWrap ul * {
-		font-size: 15px;
-	}
-}
