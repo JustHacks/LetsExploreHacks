@@ -11,17 +11,26 @@
 		<header>
 			<%- include('../partials/nav') %>
 		</header>
+
 		<main>
 			<img src="/media/topItem.svg" class="topItemLarge" />
+			<div class="modal" id="modal"></div>
 			<div class="cam">
 				<h1>Cam</h1>
 				<div class="camDisplay"></div>
-				<button class="buttonPrimary">Start</button>
+				<button class="buttonPrimary" onclick="modalToggle()">Start</button>
 			</div>
 		</main>
+
 		<%# lily you can the slides or whatever %> 
 		<footer>
 			<%- include('../partials/footer') %>
 		</footer>
+		<script>
+			const modalToggle() = () => {
+				const modal = document.getElementById('modal');
+				(modal.style.display === 'hidden') ? modal.style.display = 'show' : modal.style.display = 'hidden';
+			}
+		</script>
 	</body>
 </html>
