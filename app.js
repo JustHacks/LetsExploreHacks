@@ -13,8 +13,8 @@ app.get('/cam', (req, res) => {
 	res.render('pages/cam');
 })
 
-app.get('/vr', (req, res) => {
-	res.render('pages/vr');
+app.get('/ar', (req, res) => {
+	res.render('pages/ar');
 })
 
 app.listen(8080)

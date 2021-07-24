@@ -94,10 +94,6 @@ html, body {
 	margin: 4em auto;
 }
 
-.heading h2{
-	font-size: 2rem;
-	margin-bottom: .5em;
-}
 
 .heading h3 {font-size: 1.2rem;}
 
@@ -143,7 +139,35 @@ html, body {
 
 .cards a{
   display: contents;
- }
+}
+
+/* ________arCards________ */
+
+.arCardsWrap {
+	position: relative;
+	z-index: 300;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.arCards {
+	max-width: 400px;
+	text-align: center;
+	background-color: var(--white);
+	box-shadow: var(--shadow);
+	border-radius: .375;
+  border: .0625rem solid rgba(0, 0, 0, .08);
+}
+
+.arCards img {
+	width: 100%;
+	max-height: 200px;
+}
+
 /* ________Cam________ */
 
 .cam {
@@ -259,14 +283,14 @@ html, body {
 	flex-direction: column;
 }
 
-.homeText h2 {
+h2 {
 	text-align: center;
 	font-weight: bold;
 	font-size: 2.5em;
 }
 
 .homeText p {
-	max-width: 500px;
+	max-width: 650px;
 	font-size: 14px;
 	font-weight: 200;
 }
@@ -293,13 +317,20 @@ html, body {
 	bottom: 0; */
 	margin-top: 20px;
 	background: var(--primaryDark);
-	padding: 20px;
+	padding: 20px 40px;
 	width: 100%;
 	position: relative;
 	z-index: 900;
+  display: inline-flex;
+  justify-content: space-between;
+  color: var(--white);
 }
 
-
+.footer a{
+  color:#fafbfe;
+  width:50%;
+  padding: 0 .2em;
+}
 /* mobile first design :lilygunemote: */
 
 @media only screen and (min-width: 480px) {
@@ -345,6 +376,10 @@ html, body {
 	}
 	.homeText p {
 		font-size: 18px;
+	}
+	.arCardsWrap {
+		flex-direction: row;
+		justify-content: center;
 	}
 }
 
