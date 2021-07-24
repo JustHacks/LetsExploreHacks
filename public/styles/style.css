@@ -4,16 +4,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+  scroll-behavior: smooth;
 }
 
 :root {
 	--primary: #B998FC;
 	--primaryDark: #7B4CDB;
 	/* --secondary: ; */
-
   --text:#343A40;
   --textLight:#6C7686;
-
   --white: #ffffff;
   --shadow: 0 0 1.25rem rgb(108 118 134 / 10%) ;
 }
@@ -60,7 +59,7 @@ html, body {
 	padding: 8px 34px;
 }
 
-.hero .heroWrap article h1, .cam h1 {
+.hero .heroWrap article h1, .cam h1, .vrHeader h1 {
 	font-size: 2.5rem;
 	font-weight: bold;
 	line-height: 4rem;
@@ -105,11 +104,13 @@ html, body {
 .heading p {margin-bottom: 1rem;}
 
 .cards{
+  max-width: 800px;
 	display:flex;
 	justify-content:center;
-	align-items:center;
+  align-items: stretch;
 	flex-wrap:wrap;
-	gap: 2em;
+	gap: 3em;
+  margin: 0 auto;
 }
 
 .cards  img{
@@ -119,20 +120,30 @@ html, body {
 	margin-bottom: 1.5em;
 }
 
+.cards h3 {
+  max-width: 200px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: var(--primaryDark);
+}
+
 .card {
 	width: 90%;
-	max-width: 300px;
+	max-width: 350px;
   display: flex;
   flex-direction: column;
 	background:#fff;
-	justify-content: center;
   border: .0625rem solid rgba(0, 0, 0, .08);
   border-radius: .375rem;
 	box-shadow:var(--shadow);
-	gap:.5em;
-	padding:2em 1em;
+	gap: .7em;
+	padding:2em;
 }
 
+
+.cards a{
+  display: contents;
+ }
 /* ________Cam________ */
 
 .cam {
@@ -152,6 +163,23 @@ html, body {
 	background-color: var(--primary);
 	width: 100%;
 	height: 240px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.camDisplay > * {
+	width: 80%;
+	max-width: 380px; 
+}
+
+.labelContainer {
+	display: flex;
+	width: 100%;
+	justify-content: start;
+	flex-direction: column;
+	gap: 2px;
 }
 
 /*  */
@@ -160,9 +188,27 @@ html, body {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 90%;
+	width: 80%;
 	max-width: 400px;
 	z-index: 0;
+}
+
+.bottomItemBig {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 90%;
+	max-width: 540px;
+	z-index: 0;
+}
+
+.ellipse {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	z-index: 0;
+	width: 70%;
+	max-width: 220px !important;
 }
 
 .okWrap {
@@ -177,6 +223,12 @@ html, body {
 	max-width: 400px;
 	position: relative;
 	z-index: 300;
+}
+
+.logo {
+	width: 70px;
+	cursor: pointer;
+	margin-left: 16px;
 }
 
 .buttonPrimary {
@@ -196,15 +248,42 @@ html, body {
 	transition: 200ms ease-in-out;
 }
 
-.modal {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100vh;
-	z-index: 2000;
-	background-color: rgba(51, 51, 51, 0.594);
-	display: none;
+.homeText {
+	/* max-width: 400px; */
+	text-align: center;
+	gap: 12px;
+	padding: 120px 0px;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.homeText h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+
+.homeText p {
+	max-width: 500px;
+	font-size: 14px;
+	font-weight: 200;
+}
+
+.vrHeader {
+	position: relative;
+	z-index: 300;
+	text-align: center;
+	padding: 100px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.vrHeader p {
+	max-width: 440px;
 }
 
 /* ________footer________ */
@@ -263,6 +342,9 @@ html, body {
 	}
 	.ok {
 		max-width: 600px;
+	}
+	.homeText p {
+		font-size: 18px;
 	}
 }
 
