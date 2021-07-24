@@ -8,8 +8,8 @@
 
 :root {
 	/* we can actually call the colours smth useful once we think of pallete */
-	--primary: #15278b;
-	--primaryDark: #0c185d;
+	--primary: #7B4CDB;
+	--primaryDark: rgb(109, 66, 193);
 	--secondary: #FFFFFF;
 }
 
@@ -34,7 +34,10 @@ nav {
 
 nav .navWrap {
 	display: flex;
-	justify-content: end; /* When we have logo we can set justify-content to space-evenly */
+	justify-content: space-between;
+	padding: 1px 3px;
+	align-items: center;
+  /* When we have logo we can set justify-content to space-evenly */
 }
 
 nav .navLinksWrap {
@@ -93,17 +96,24 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 @media only screen and (min-width: 480px) {
 	nav {
 		padding: 4px 2px;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	nav .navWrap {
+		width: max-content;
 	}
 	nav .navLinksWrap ul {
 		flex-direction: row;
 		justify-content: end;
-		padding: 12px 14px;
+		padding: 6px 8px;
 		display: flex !important;
-		gap: 2px;
+		gap: 8px;
 	}
 	nav .navLinksWrap ul * {
+		padding: 0px 0px;
 		border-radius: 0;
-		font-size: 16px;
+		font-size: 13px;
 		width: max-content;
 	}
 	nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
@@ -111,5 +121,11 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 	}
 	.hamburger {
 		display: none;
+	}
+}
+
+@media only screen and (min-width: 620px) {
+	nav .navLinksWrap ul * {
+		font-size: 15px;
 	}
 }
