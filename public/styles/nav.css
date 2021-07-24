@@ -48,6 +48,11 @@ nav .navLinksWrap ul * {
 	display: flex;
 }
 
+nav .navLinksWrap ul li a {
+	display: flex;
+	width: 100%;
+}
+
 nav .navLinksWrap ul li:hover, nav .navLinksWrap ul li:active {
 	transition: all 200ms ease-out;
 	background-color: var(--primary);
@@ -88,7 +93,7 @@ nav .navLinksWrap ul li:hover, nav .navLinksWrap ul li:active {
 		gap: 8px;
 	}
 	nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
-		background-color: inherit;
+		background-color: inherit !important;
 	}
 	.hamburger {display: none;}
 }
