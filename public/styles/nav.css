@@ -10,6 +10,11 @@ nav {
 	z-index: 1000;
 }
 
+.tempLogo{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 nav .navWrap {
 	display: flex;
 	justify-content: space-between;
@@ -33,17 +38,19 @@ nav .navLinksWrap ul {
 
 nav .navLinksWrap ul * {
 	list-style-type: none;
+	text-decoration: none;
+	color: var(--white);
 	cursor: pointer;
 	font-size: 17px;
 	padding: 6px 8px;
 	border-radius: 7px;
-	transition: all 350ms ease-out;
+	transition: all 200ms ease-out;
 	display: flex;
 }
 
-nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
-	transition: all 350ms ease-out;
-	background-color: var(--primaryDark);
+nav .navLinksWrap ul li:hover, nav .navLinksWrap ul li:active {
+	transition: all 200ms ease-out;
+	background-color: var(--primary);
 }
 
 /* hamburger menu */
@@ -63,7 +70,7 @@ nav .navLinksWrap ul *:hover, nav .navLinksWrap ul *:active {
 }
 
 .hamburger:hover, .hamburger:active {
-	transition: all 350ms ease-out;
+	transition: all 200ms ease-out;
 	background-color: var(--primary);
 }
 

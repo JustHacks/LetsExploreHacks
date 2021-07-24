@@ -2,24 +2,24 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, 	initial-scale=1.0">
-		<title>Home - SPED</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cam - SPED</title>
 		<link rel="stylesheet" href="/styles/style.css" type="text/css" />
 		<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 	</head>
-
 	<body>
 		<header>
 			<%- include('../partials/nav') %>
 		</header>
-
 		<main>
-			<%- include('../partials/hero') %>
-			<%- include('../partials/cards') %>
-			<div class="okWrap"><img src="/media/ok.svg" class="ok" /></div>
-			<img src="/media/bottomItem.svg" class="bottomItem" />
+			<img src="/media/topItem.svg" class="topItemLarge" />
+			<div class="cam">
+				<h1>Cam</h1>
+				<div class="camDisplay"></div>
+				<button class="buttonPrimary">Start</button>
+			</div>
 		</main>
-		
+		<%# lily you can the slides or whatever %> 
 		<footer>
 			<%- include('../partials/footer') %>
 		</footer>

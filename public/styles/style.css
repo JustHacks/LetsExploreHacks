@@ -16,16 +16,16 @@
 
   --white: #ffffff;
   --shadow: 0 0 1.25rem rgb(108 118 134 / 10%) ;
-;
 }
 
 html, body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
   background: #fafbfe;
   overflow-x: hidden;
+	position: relative;
 }
 
 /* ________hero_________ */
@@ -33,7 +33,6 @@ html, body {
 .hero {
 	margin: 5em auto;
 }
-
 .hero .heroWrap {
 	position: relative;
 	z-index: 100;
@@ -43,7 +42,7 @@ html, body {
   gap:3em;
 }
 
-.hero .topItem {
+.hero .topItem, .topItemLarge {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -52,15 +51,19 @@ html, body {
 	z-index: 0;
 }
 
+.topItemLarge {
+	max-width: 660px !important;
+}
+
 .hero .heroWrap article {
-	max-width: 480px;
+	max-width: 550px;
 	padding: 8px 34px;
 }
 
-.hero .heroWrap article h1 {
-	font-size: 3.2rem;
+.hero .heroWrap article h1, .cam h1 {
+	font-size: 2.5rem;
 	font-weight: bold;
-	line-height: 3.2rem;
+	line-height: 4rem;
 }
 
 .hero .heroWrap article h1 .headerSecondaryText {
@@ -69,19 +72,8 @@ html, body {
 
 .hero .heroWrap article p {
 	font-size: 18px;
-	padding: 34px 0px;
+	padding: 1em 0px 2em 0;
 	font-weight: 200;
-}
-
-.hero .heroWrap article .learnMore {
-	background-color: var(--primaryDark);
-	color: var(--white);
-	font-size: 16px;
-	padding: 12px 30px;
-	border-radius: 4px;
-	cursor: pointer;
-	border: none;
-	outline: none;
 }
 
 .hero .heroWrap .art {
@@ -96,6 +88,7 @@ html, body {
 	padding: 0 15px;
 	text-align: center;
   position: relative;
+	z-index: 50;
 }
 
 .heading{
@@ -140,6 +133,82 @@ html, body {
 	padding:2em 1em;
 }
 
+/* ________Cam________ */
+
+.cam {
+	padding: 40px 0px;
+	z-index: 100;
+	position: relative;
+	display: flex;
+	gap: 22px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 420px;
+	margin: 0 auto;
+}
+
+.camDisplay {
+	background-color: var(--primary);
+	width: 100%;
+	height: 240px;
+}
+
+/*  */
+
+.bottomItem {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 90%;
+	max-width: 400px;
+	z-index: 0;
+}
+
+.okWrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px !important;
+}
+
+.ok {
+	width: 80%;
+	max-width: 400px;
+	position: relative;
+	z-index: 300;
+}
+
+.buttonPrimary {
+	background-color: var(--primaryDark);
+	color: var(--white);
+	font-size: 16px;
+	padding: 12px 30px;
+	border-radius: 3.5px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: 200ms ease-in-out;
+}
+
+.buttonPrimary:hover {
+	background-color: var(--primary);
+	transition: 200ms ease-in-out;
+}
+
+/* ________footer________ */
+
+.footer {
+	/* position: absolute;
+	bottom: 0; */
+	margin-top: 20px;
+	background: var(--primaryDark);
+	padding: 20px;
+	width: 100%;
+	position: relative;
+	z-index: 900;
+}
+
 
 /* mobile first design :lilygunemote: */
 
@@ -161,6 +230,12 @@ html, body {
 	}
 	.hamburger {display: none;}
 	/* .hero  */
+	.cam {
+		padding: 80px 0px;
+	}
+	.ok {
+		max-width: 480px;
+	}
 }
 
 @media only screen and (min-width: 620px) {
@@ -169,5 +244,18 @@ html, body {
     flex-direction: row;
     justify-content: space-evenly;
 	}
+	.cam {
+		max-width: 560px;
+	}
+	.camDisplay {
+		height: 300px;
+	}
+	.ok {
+		max-width: 600px;
+	}
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}

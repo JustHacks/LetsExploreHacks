@@ -9,4 +9,12 @@ app.get('/', (req, res) => {
 	res.render('pages/index');
 })
 
+app.get('/cam', (req, res) => {
+	res.render('pages/cam');
+})
+
+app.get('/vr', (req, res) => {
+	res.render('pages/vr');
+})
+
 app.listen(8080)
