@@ -386,6 +386,7 @@ html, body {
 	border-radius: .375rem;
 	padding: 6px 8px;
 	transition: 200ms ease-in-out;
+	position: relative;
 }
 
 .speechRecContainer .app .notes ul li:hover, .speechRecContainer .app ul li:active {
@@ -399,12 +400,27 @@ html, body {
 
 .speechRecContainer .app .notes ul li p {
 	display: flex;
-	width: 100%;
+	width: 70%;
 }
 
 .speechRecContainer .app .notes ul li:hover .no-notes {
 	opacity: 1 !important;
 	pointer-events: none;
+}
+
+.speechRecContainer .app .notes ul li p .date {
+	padding: 0px 8px;
+}
+
+.speechRecContainer .app .notes ul li p .delete-note {
+	position: absolute;
+	right: 5px;
+	bottom: 2px;
+}
+
+.speechRecContainer .app .notes ul li p .listen-note {
+	position: absolute;
+	right: 5px;
 }
 
 /*  */
