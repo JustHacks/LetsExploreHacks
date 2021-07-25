@@ -485,7 +485,7 @@ html, body {
 }
 
 .galleryCard article {
-	padding-block-end: 2em;
+	padding: 2em;
 }
 
 .galleryCard article h2 {
