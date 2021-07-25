@@ -201,6 +201,18 @@ html, body {
 	text-align: center !important;
 }
 
+.arCards .arCardsAWrap {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+}
+
+.arCards .arCardsAWrap a {
+	position: absolute;
+	bottom: 22px;
+}
+
 /* .arCards .arCardsAWrap {
 	display: flex;
 	align-items: center;
