@@ -136,18 +136,31 @@ html, body {
 	box-shadow:var(--shadow);
 	gap: .7em;
 	padding:2em;
+  z-index: 2;
 }
 
 
 .cards a{
   display: contents;
+  left:0px;
+}
+
+/* _____dots_____ */
+.dots{position: absolute;}
+
+.features .dots{
+  left: 22%;
+  top: 8%;
+}
+.arCardsWrap .dots{
+  left: 5%;
+  top: 0%;
 }
 
 /* ________arCards________ */
 
 .arCardsWrap {
 	position: relative;
-	/* z-index: 00; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -156,17 +169,6 @@ html, body {
 	gap: 14px;
 	padding: 20px 0px;
 }
-
-/* .arCardsWrap .dotsWrap .dots {
-	position: absolute;
-	top: 0;
-	left: 12px;
-	z-index: 0 !important;
-} */
-
-/* .arCardsWrap .dotsWrap {
-	position: relative;
-} */
 
 .arCards {
 	max-width: 400px;
@@ -331,7 +333,7 @@ html, body {
 
 .speechRecContainer .app .input-single textarea {
 	width: 100%;
-	padding: 4px 6px;
+	padding: 6px 10px;
 	font-size: 15px;
 	border: 1px solid rgba(0, 0, 0, .08);
 	border-radius: .375rem;
@@ -508,7 +510,7 @@ html, body {
 	flex-direction: column;
 }
 
-h2 {
+.homeText h2 {
 	text-align: center;
 	font-weight: bold;
 	font-size: 2.5em;
@@ -516,6 +518,7 @@ h2 {
 
 .homeText p {
 	max-width: 650px;
+	width: 80%;
 	font-size: 14px;
 	font-weight: 200;
 }
@@ -583,9 +586,6 @@ h2 {
 	.ok {
 		max-width: 480px;
 	}
-	.arCardsWrap .dots {
-		left: 60px !important;
-	}
 	.speechRecContainer .app {
 		width: 88%;
 	}
@@ -632,6 +632,10 @@ h2 {
 	.speechRecBtnsWrap .app {
 		width: 60% !important;
 	}
+  .arCardsWrap .dots{
+  left: -3%;
+  top: -2%;
+  }
 }
 
 a {

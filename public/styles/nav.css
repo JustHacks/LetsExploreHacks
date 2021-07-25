@@ -46,6 +46,7 @@ nav .navLinksWrap ul * {
 	border-radius: 7px;
 	transition: all 200ms ease-out;
 	display: flex;
+	white-space: nowrap;
 }
 
 nav .navLinksWrap ul li a {

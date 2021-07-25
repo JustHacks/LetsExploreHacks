@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<%# Head %>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>VR - SPED</title>
@@ -8,26 +9,35 @@
 		<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 		<link rel="icon" type="image/svg" href="/media/SPEDlogo.svg" />
 	</head>
+	<%# end of head %>
 	<body>
+		<%# Import Nav %>
 		<header>
 			<%- include('../partials/nav') %>
 		</header>
 
+		<%# Main content %>
 		<main>
+			<%# Absolute SVG that is displayed on page %>
 			<img src="/media/topItem.svg" class="topItemLarge" />
+			<%# Text Header at top of page %>
 			<article class="vrHeader">
 				<h1>Augmented Reality</h1>
 				<p>Augmented reality (AR) in education enables the visual depiction of the learning material and enables teachers to impart interactive learning in lessons while it allows learners to view information visually (layered on the top of their real-world surroundings). AR can greatly help students become more involved in their classes. It provides much more interactive learning along with  opportunities to implement hands-on learning approaches that can increase engagement and enhance the learning experience for the students. Below are some human body parts and animals that we transferred to AR. In the future we hope to implement a sorting gallery and add in many more visual representations of topics.</p>
 			</article>
+			<%# Import cards %>
 			<section>
 				<%- include('../partials/arCards') %>
+				<%# Absolute SVGs that are displayed on page %>
 				<div class="arImgWrap">
 					<img src="/media/arImg.svg" class="arImg" />
 				</div>
 				<img src="/media/ellipse.svg" class="ellipseTwo" />
 			</section>
 		</main>
+		<%# End of main content %>
 
+		<%# Import footer %>
 		<footer>
 			<%- include('../partials/footer') %>
 		</footer>
