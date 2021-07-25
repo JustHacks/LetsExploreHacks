@@ -15,6 +15,7 @@
 
 			<main>
 				<img src="/media/topItem.svg" class="topItemLarge" />
+				<img src="/media/ellipse.svg" class="ellipse" />
 				<article class="speechRecHeader">
 					<h1>Speech Recognition</h1>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nesciunt fugit quod sapiente architecto odio alias cum, officiis tempora, dolore enim.</p>
@@ -203,7 +204,7 @@
                 });
               }
               else {
-                html = '<li><p class="content">You don\'t have any notes yet.</p></li>';
+                html = '<li style="pointer-events:none;"><p class="content">You don\'t have any notes yet.</p></li>';
               }
               notesList.html(html);
             }

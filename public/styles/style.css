@@ -317,6 +317,10 @@ html, body {
 	align-items: center;
 }
 
+.speechRecContainer .app {
+	width: 100%;
+}
+
 .speechRecContainer .app .input-single {
 	width: 100%;
 	display: flex;
@@ -394,22 +398,9 @@ html, body {
 	transition: 200ms ease-in-out;
 }
 
-/* .speechRecContainer .app .notes ul li .no-notes {
-	pointer-events: none;
-} */
-
 .speechRecContainer .app .notes ul li p {
 	display: flex;
 	width: 70%;
-}
-
-.speechRecContainer .app .notes ul li:hover .no-notes {
-	opacity: 1 !important;
-	pointer-events: none;
-}
-
-.speechRecContainer .app .notes ul li p .date {
-	padding: 0px 8px;
 }
 
 .speechRecContainer .app .notes ul li p .delete-note {
@@ -535,7 +526,8 @@ h2 {
 }
 
 .vrHeader p, .speechRecHeader p {
-	max-width: 660px;
+	max-width: 900px;
+  padding: 1em 2em;
 }
 
 /* ________footer________ */
@@ -588,6 +580,9 @@ h2 {
 	.arCardsWrap .dots {
 		left: 60px !important;
 	}
+	.speechRecContainer .app {
+		width: 88%;
+	}
 }
 
 @media only screen and (min-width: 620px) {
@@ -612,12 +607,17 @@ h2 {
 		flex-direction: row;
 		justify-content: center;
 		gap: 34px;
+    max-width: 1000px;
+    margin: auto;
 	}
 	.arCards {
 		max-width: 300px;
 	}
 	.arCards article p {
 		font-size: 18px;
+	}
+	.speechRecBtnsWrap .app {
+		width: 60% !important;
 	}
 }
 
