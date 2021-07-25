@@ -422,6 +422,66 @@ html, body {
 	white-space: nowrap;
 }
 
+/* ______Slider_______ */
+
+.carouselContainer, .carouselContainer2 {
+	display: flex;
+	padding: 28px 0px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+	position: relative;
+	z-index: 200;
+}
+
+.carouselContainer h2, .carouselContainer2 h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+
+.nslider {
+  max-width: 600px;
+	width: 90%;
+	height: 560px;
+	position: relative;
+	z-index: 500;
+	padding: 8em 0px;
+}
+
+.nslider .nslider-dots .nslider-dot {
+	background-color: var(--primaryDark) !important;
+}
+
+.nslider-button-prev, .nslider-button-next {
+	display: none !important;
+}
+
+.galleryCard {
+	background-color: var(--white);
+	margin: 0 auto;
+	width: 100%;
+	max-width: 380px;
+	height: 460px;
+	padding: 2em;
+	color: var(--text);
+	border: .0625rem solid rgba(0, 0, 0, .08);
+  border-radius: .375rem;
+	box-shadow:var(--shadow);
+}
+
+.galleryCard article h2 {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 2em !important;
+}
+
+.galleryCard article p {
+	font-size: 15px;
+	padding: 1.4em 0;
+}
+
 /*  */
 
 .bottomItem {
@@ -518,6 +578,8 @@ html, body {
 	justify-items: center;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
+	z-index: 300;
 }
 
 .homeText h2 {
@@ -605,6 +667,13 @@ html, body {
 	.speechRecContainer .app ul li .noteBtnWrap {
 		font-size: 18px !important;
 		width: 100% !important;
+	}
+	.nslider {
+		width: 70% !important;
+	}
+	.galleryCard article h2 {
+		font-size: 2.2em;
+		font-weight: bold;
 	}
 }
 

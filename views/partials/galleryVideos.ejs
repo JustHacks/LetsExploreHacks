@@ -1,0 +1,58 @@
+<%# nslider cdn links %>
+<head>
+			<script src="https://cdn.jsdelivr.net/gh/fatihege/nslider@1.0.0/src/js/nslider.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fatihege/nslider@1.0.0/src/css/nslider.css" />
+    <link rel="stylesheet" href="css/nslider.css" />
+	</head>
+	<%# parent container %>
+	<div class="carouselContainer">
+				<h2>Videos</h2>
+				<%# slider %>
+    		<div class="nslider">
+      	  <div class="nslider-wrapper">
+            <div class="nslider-slide" id="slide-1">
+						<%# card content %>
+              <div class="galleryCard">
+							 	<a href="#">
+								 <article>
+								 	 <h2>Placeholder</h2>
+									 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nesciunt fugit quod sapiente architecto odio alias cum, officiis tempora, dolore enim.</p>
+									</article>
+							</div>
+            </div>
+            <div class="nslider-slide" id="slide-2">
+						<%# card content %>
+               <div class="galleryCard">
+							 	<a href="#">
+								 <article>
+								 	 <h2>Placeholder</h2>
+									 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nesciunt fugit quod sapiente architecto odio alias cum, officiis tempora, dolore enim.</p>
+									</article>
+							</div>
+            </div>
+						 <div class="nslider-slide" id="slide-3">
+						<%# card content %>
+               <div class="galleryCard">
+							 	<a href="#">
+								 <article>
+								 	 <h2>Placeholder</h2>
+									 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nesciunt fugit quod sapiente architecto odio alias cum, officiis tempora, dolore enim.</p>
+									</article>
+							</div>
+            </div>
+        </div>
+        <div class="nslider-button nslider-button-prev"></div>
+        <div class="nslider-button nslider-button-next"></div>
+    		</div>
+			</div>
+
+		<script src="js/nslider.js"></script>
+		<script type="text/javascript">
+			// Carousel Slider
+		const slider = new NSlider({
+        elem: document.querySelector('.carouselContainer'),      
+        animation: false,
+        keyboardControl: false,
+        dots: true,
+    });
+		</script>
