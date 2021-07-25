@@ -403,15 +403,21 @@ html, body {
 	width: 70%;
 }
 
-.speechRecContainer .app .notes ul li p .delete-note {
-	position: absolute;
-	right: 5px;
-	bottom: 2px;
+.speechRecContainer .app ul li .noteBtnWrap {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	/* padding: 8px 0px; */
 }
 
-.speechRecContainer .app .notes ul li p .listen-note {
-	position: absolute;
-	right: 5px;
+.speechRecContainer .app ul li .noteBtnWrap * {
+	display: flex;
+	justify-content: center;
+	font-size: 13px;
+	white-space: nowrap;
 }
 
 /*  */
@@ -582,6 +588,13 @@ h2 {
 	}
 	.speechRecContainer .app {
 		width: 88%;
+	}
+	.speechRecContainer .app ul li .noteBtnWrap {
+		gap: 50px !important;
+	}
+	.speechRecContainer .app ul li .noteBtnWrap {
+		font-size: 18px !important;
+		width: 100% !important;
 	}
 }
 
