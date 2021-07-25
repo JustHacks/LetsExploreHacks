@@ -23,8 +23,8 @@ app.get('/ar', (req, res) => {
 	res.render('pages/ar');
 })
 
-app.get('/speechrec', (req, res) => {
-	res.render('pages/speechrec');
+app.get('/ttslearning', (req, res) => {
+	res.render('pages/ttslearning');
 })
 
 // Initiate the server on port 8080
