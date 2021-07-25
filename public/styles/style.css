@@ -470,13 +470,22 @@ html, body {
 	width: 100%;
 	max-width: 380px;
 	height: 460px;
-	padding: 2em;
 	color: var(--text);
 	border: .0625rem solid rgba(0, 0, 0, .08);
   border-radius: .375rem;
 	box-shadow:var(--shadow);
 	overflow-y: auto;
 	overflow-x: hidden;
+	position: relative;
+}
+
+.galleryCard img {
+	max-width: 380px;
+	width: 100%;
+}
+
+.galleryCard article {
+	padding-block-end: 2em;
 }
 
 .galleryCard article h2 {
