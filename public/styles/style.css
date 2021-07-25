@@ -170,6 +170,7 @@ html, body {
 .arCards {
 	max-width: 400px;
 	width: 80%;
+	height: 600px;
 	text-align: center;
 	background-color: var(--white);
 	box-shadow: var(--shadow);
@@ -200,6 +201,12 @@ html, body {
 	text-align: center !important;
 }
 
+/* .arCards .arCardsAWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
+
 /* .arCardWrap {
 	display: flex;
 	justify-content: center;
@@ -220,7 +227,7 @@ html, body {
 	background: url('../media/skeleton.png') !important;
 	background-size: contain !important;
 	background-repeat: no-repeat !important;
-	background-position: center center !important;
+	background-position: center right !important;
 	margin: 0 auto;
 }
 
