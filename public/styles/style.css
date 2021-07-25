@@ -145,27 +145,122 @@ html, body {
 
 .arCardsWrap {
 	position: relative;
-	z-index: 300;
+	/* z-index: 00; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	gap: 12px;
+	gap: 14px;
+	padding: 20px 0px;
 }
+
+/* .arCardsWrap .dotsWrap .dots {
+	position: absolute;
+	top: 0;
+	left: 12px;
+	z-index: 0 !important;
+} */
+
+/* .arCardsWrap .dotsWrap {
+	position: relative;
+} */
 
 .arCards {
 	max-width: 400px;
+	width: 80%;
 	text-align: center;
 	background-color: var(--white);
 	box-shadow: var(--shadow);
-	border-radius: .375;
+	border-radius: .375rem;
   border: .0625rem solid rgba(0, 0, 0, .08);
+	position: relative;
+	z-index: 300;
+	padding: 0px 0px 12px 0px;
 }
 
-.arCards img {
+.arCards article {
+	padding: 24px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.arCards article h3 {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+.arCards article p {
+	padding: 14px 0px;
+	font-size: 15px;
+	max-width: 200px;
+	text-align: center !important;
+}
+
+/* .arCardWrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
-	max-height: 200px;
+	background-color: #0000;
+} */
+
+.arCards .imgContainer {
+	/* width: 100% !important; */
+	height: 200px;
+	background: #000;
+	border-top-left-radius: .375rem;
+	border-top-right-radius: .375rem;
+}
+
+.arCards .arCard1 {
+	background: url('../media/skeleton.png') !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	margin: 0 auto;
+}
+
+.arCards .arCard2 {
+	background: url('../media/brain.png') !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	margin: 0 auto;
+}
+
+.arCards .arCard3 {
+	background: url('../media/skull.png') !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	margin: 0 auto;
+}
+
+.arCards .arCard4 {
+	background: url('../media/lungs.png') !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	margin: 0 auto;
+}
+
+.arCards .arCard5 {
+	background: url('../media/elephant.png') !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	margin: 0 auto;
+}
+
+.arCards .arCard6 {
+	background: url('../media/articFox.png') !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	margin: 0 auto;
 }
 
 /* ________Cam________ */
@@ -226,7 +321,7 @@ html, body {
 	z-index: 0;
 }
 
-.ellipse {
+.ellipse, .ellipseTwo {
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -235,11 +330,15 @@ html, body {
 	max-width: 220px !important;
 }
 
-.okWrap {
+.ellipseTwo {
+	top: 35%;
+}
+
+.okWrap, .arImgWrap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 40px !important;
+	margin-top: 80px !important;
 }
 
 .ok {
@@ -253,6 +352,13 @@ html, body {
 	width: 70px;
 	cursor: pointer;
 	margin-left: 16px;
+}
+
+.arImg {
+	margin: 0 auto;
+	margin-top: 20px !important;
+	width: 80%;
+	max-width: 1000px;
 }
 
 .buttonPrimary {
@@ -276,7 +382,7 @@ html, body {
 	/* max-width: 400px; */
 	text-align: center;
 	gap: 12px;
-	padding: 120px 0px;
+	padding: 60px 0px;
 	display: flex;
 	justify-items: center;
 	align-items: center;
@@ -299,7 +405,7 @@ h2 {
 	position: relative;
 	z-index: 300;
 	text-align: center;
-	padding: 100px 0px;
+	padding: 60px 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -307,7 +413,7 @@ h2 {
 }
 
 .vrHeader p {
-	max-width: 440px;
+	max-width: 660px;
 }
 
 /* ________footer________ */
@@ -357,6 +463,9 @@ h2 {
 	.ok {
 		max-width: 480px;
 	}
+	.arCardsWrap .dots {
+		left: 60px !important;
+	}
 }
 
 @media only screen and (min-width: 620px) {
@@ -380,6 +489,13 @@ h2 {
 	.arCardsWrap {
 		flex-direction: row;
 		justify-content: center;
+		gap: 34px;
+	}
+	.arCards {
+		max-width: 300px;
+	}
+	.arCards article p {
+		font-size: 18px;
 	}
 }
 
