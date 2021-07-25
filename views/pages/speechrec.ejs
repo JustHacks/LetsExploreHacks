@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+	<%# Head %>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,36 @@
 		<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 		<link rel="icon" type="image/svg" href="/media/SPEDlogo.svg" />
 	</head>
+	<%# End of head %>
 	<body>
+		<%# Import nav %>
 		<header>
 			<%- include('../partials/nav') %>
 		</header>
 
+			<%# Main content %>
 			<main>
+				<%# Absolute SVGs that are displayed on page %>
 				<img src="/media/topItem.svg" class="topItemLarge" />
 				<img src="/media/ellipse.svg" class="ellipse" />
+
+				<%# Text header at the top of the page %>
 				<article class="speechRecHeader">
 					<h1>Speech Recognition</h1>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nesciunt fugit quod sapiente architecto odio alias cum, officiis tempora, dolore enim.</p>
 				</article>
-				<div class="speechRecContainer">
 
+				<%# Container for notes section %>
+				<div class="speechRecContainer">
+						<%# Another container %>
             <div class="app"> 
                 <h3></h3>
+								<%# Textarea for user to input notes %>
                 <div class="input-single">
                     <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
-                </div>         
+                </div> 
+
+						<%# Buttons %>        
 						<div class="speechRecBtnsWrap">
 							<div class="speechRecRecogBtnsWrap">
                <!--Start Recognition Button -->
@@ -43,6 +55,8 @@
                 <!--Description for using the buttons -->
                 <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access. (Make sure to keep your volume is high.)</p>
                 
+
+							<%# Notes %>
 							<div class="notes">
                 <h3>My Notes</h3>
                 <ul id="notes">
@@ -58,11 +72,13 @@
 
         </div>
 			</main>
+			<%# End of main content %>
 
+		<%# Import footer %>
 		<footer>
 			<%- include('../partials/footer') %>
 		</footer>
-
+		<!-- Start of Javascript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
             try {
