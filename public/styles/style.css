@@ -8,7 +8,8 @@
 }
 
 :root {
-	--primary: #B998FC;
+	--primary:  #B998FC;
+	--primaryLight: #cdb3ffdc;
 	--primaryDark: #7B4CDB;
 	/* --secondary: ; */
   --text:#343A40;
@@ -32,6 +33,7 @@ html, body {
 .hero {
 	margin: 5em auto;
 }
+
 .hero .heroWrap {
 	position: relative;
 	z-index: 100;
@@ -59,7 +61,7 @@ html, body {
 	padding: 8px 34px;
 }
 
-.hero .heroWrap article h1, .cam h1, .vrHeader h1 {
+.hero .heroWrap article h1, .cam h1, .vrHeader h1, .speechRecHeader h1 {
 	font-size: 2.5rem;
 	font-weight: bold;
 	line-height: 4rem;
@@ -301,6 +303,110 @@ html, body {
 	gap: 2px;
 }
 
+
+
+/*________SpeechRec________  */
+
+.speechRecContainer {
+	position: relative;
+	z-index: 400;
+	padding: 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.speechRecContainer .app .input-single {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 0px;
+}
+
+.speechRecContainer .app .input-single textarea {
+	width: 100%;
+	padding: 4px 6px;
+	font-size: 15px;
+	border: 1px solid rgba(0, 0, 0, .08);
+	border-radius: .375rem;
+	box-shadow: var(--shadow);
+	font-family: 'Poppins', 'sans-serif';
+}
+
+.speechRecContainer .app .input-single textarea:focus {
+	outline: none !important;
+	border: 1px solid var(--primary);
+}
+
+.speechRecContainer .app .speechRecBtnsWrap {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 4px 0px;
+}
+
+.speechRecContainer .app .speechRecBtnsWrap button {
+	width: max-content !important;
+}
+
+.speechRecContainer .app .speechRecRecogBtnsWrap {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.speechRecContainer .app p {
+	padding: 18px 0px;
+	font-size: 18px;
+}
+
+.speechRecContainer .app .notes {
+	padding: 14px;
+	background-color: var(--primary);
+	color: var(--white);
+	width: 100%;
+	border-radius: .375rem;
+	overflow: auto;
+	height: 600px;
+}
+
+.speechRecContainer .app .notes h3 {
+	font-size: 2em;
+	font-weight: bold;
+	padding: 10px 0px;
+}
+
+.speechRecContainer .app .notes ul li {
+	list-style-type: none;
+	margin-bottom: 2px;
+	width: 100%;
+	border-radius: .375rem;
+	padding: 6px 8px;
+	transition: 200ms ease-in-out;
+}
+
+.speechRecContainer .app .notes ul li:hover, .speechRecContainer .app ul li:active {
+	background-color: var(--primaryLight);
+	transition: 200ms ease-in-out;
+}
+
+/* .speechRecContainer .app .notes ul li .no-notes {
+	pointer-events: none;
+} */
+
+.speechRecContainer .app .notes ul li p {
+	display: flex;
+	width: 100%;
+}
+
+.speechRecContainer .app .notes ul li:hover .no-notes {
+	opacity: 1 !important;
+	pointer-events: none;
+}
+
 /*  */
 
 .bottomItem {
@@ -401,7 +507,7 @@ h2 {
 	font-weight: 200;
 }
 
-.vrHeader {
+.vrHeader, .speechRecHeader {
 	position: relative;
 	z-index: 300;
 	text-align: center;
@@ -412,7 +518,7 @@ h2 {
 	flex-direction: column;
 }
 
-.vrHeader p {
+.vrHeader p, .speechRecHeader p {
 	max-width: 660px;
 }
 

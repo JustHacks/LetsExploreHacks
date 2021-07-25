@@ -17,4 +17,8 @@ app.get('/ar', (req, res) => {
 	res.render('pages/ar');
 })
 
+app.get('/speechrec', (req, res) => {
+	res.render('pages/speechrec');
+})
+
 app.listen(8080)
