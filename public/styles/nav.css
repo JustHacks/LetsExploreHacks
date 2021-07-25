@@ -55,7 +55,7 @@ nav .navLinksWrap ul li a {
 }
 
 nav .navLinksWrap ul li:hover, nav .navLinksWrap ul li:active {
-	transition: all 200ms ease-out;
+	/* transition: all 200ms ease-out; */
 	background-color: var(--primary);
 }
 
