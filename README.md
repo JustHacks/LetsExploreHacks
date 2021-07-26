@@ -19,7 +19,7 @@ SPED has various features which target and provide a solution for the different 
 
 - **Speech-to-Text Learning:** This feature aims to help children who have writing disabilities and poor communication skills. (It aims to help children with Dysgraphia.) Using this feature, children will be able to speak and the computer will write whatever they say down for them. This can also help in taking notes.
 
-## How we built it
+## 🔨 How we built it
 We utilized the templating language EJS, along with CSS for our frontend. We made sure to make use of things such as partials when we were using EJS. We also utilized NodeJS to set up a simple web server, and this was all built on in-browser IDE Repl.it, which was very useful for collaborating and giving feedback in real time. 
 
 Then for the emotion camera we utilized tensorflow.js and machine learning to train the model and then we added it to our website through JavaScript! 
@@ -43,3 +43,19 @@ In the future, SPED hopes to:
 ## 📔 References
 
 * B. Butterworth, Y. Kovas. Understanding Neurocognitive Developmental Disorders Can Improve Education for All. Science, 2013; 340 (6130): 300 DOI: 10.1126/science.1231022
+
+## 👭 Team
+
+- Cyra Alesha - 
+- Lily Khan - Site Design, Front-end and Logo.
+- Reeva Khokhar - 
+- Cow Burton - 
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/cyraalesha"><img src="https://media.discordapp.net/attachments/857709079714594826/867382194186747904/Screen_Shot_2021-07-21_at_19.25.22.png" width="100px;" alt=""/><br /><sub><b>Cyra Alesha</b></sub></a></td>
+    <td align="center"><a href="https://github.com/lilykhan786"><img src="https://avatars1.githubusercontent.com/u/47777673?s=460&u=b5531e40e1b9a31078e024f861116678fecaa826&v=4" width="100px;" alt=""/><br /><sub><b>Lily Khan</b></sub></a></td>
+        <td align="center"><a href="https://github.com/reevakhokhar"><img src="https://media.discordapp.net/attachments/857709079714594826/867477429476261908/AvatarMaker.png" width="100px;" alt=""/><br /><sub><b>Reeva Khokhar</b></sub></a></td>
+    <td align="center"><a href="https://github.com/SilentElapid"><img src="https://avatars.githubusercontent.com/u/69002970?v=4" width="100px;" alt=""/><br /><sub><b>Cow Burton</b></sub></a></td>
+  </tr>
+</table>
