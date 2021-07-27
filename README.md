@@ -46,10 +46,10 @@ In the future, SPED hopes to:
 
 ## 👭 Team
 
-- Cyra Alesha - 
+- Cyra Alesha - Emotion detector camera and video.
 - Lily Khan - Site Design, Front-end and Logo.
-- Reeva Khokhar - 
-- Cow Burton - 
+- Reeva Khokhar - AR, TTS and STT.
+- Cow Burton - Front-end of the site.
 
 <table>
   <tr>
